@@ -33,12 +33,15 @@ public class ControleD3 : MonoBehaviour
         "Foi. 74, a ditadura tava em plena força, e as pessoas desapareciam e nunca mais eram vistas pela família. Tem gente que até hoje ninguém sabe o paradeiro.",
         "Eram anos terríveis. E tinha outra coisa, não se podia falar de preconceito, eles diziam que o que existia no Brasil era uma democracia racial.",
         "Hahai, e o preconceito solto no mundo, pior do que hoje.",
-        "Para você ver como as coisas eram difíceis, quando o Ilê saiu, os jornais vieram pra cima, acusaram eles de vermelhos, de estarem a serviço de Moscou, disseram que eram negros rebeldes que estavam espalhando o racismo na cidade, “bloco racista, nota destoante”, dizendo que era um espetáculo feio com uma exploração imprópria do tema do racismo! Veja se pode um negócio desses?!",
-        "Se uma das razões de ser do bloco é que o povo negro não encontrava lugar nós carnavais de Salvador. O carnaval também não nos incluía. Então a gente fez o nosso espaço, positivamente e de modo pacífico. Mas, sim… na época Antônio Vovô tinha muita influência das revoluções que estavam acontecendo nos Estados Unidos, dos Panteras Negras, do movimento Black Power, então ele queria botar o nome do bloco de Poder Negro. Mas Mãe Hilda aconselhou a ele que era melhor não, que aquele nome poderia dar problema com as autoridades da época.",
-        "Outra pessoa que repetiu o conselho foi Seu Arquimedes, que disse a Antônio Vovô a mesma história, que ele não colocasse aquele nome.",
+        "Para você ver como as coisas eram difíceis, quando o Ilê saiu, os jornais vieram pra cima, acusaram eles de vermelhos, de estarem a serviço de Moscou, disseram que eram negros rebeldes que estavam espalhando o racismo na cidade.",
+        "“bloco racista, nota destoante”, dizendo que era um espetáculo feio com uma exploração imprópria do tema do racismo! Veja se pode um negócio desses?!",
+        "Se uma das razões de ser do bloco é que o povo negro não encontrava lugar nós carnavais de Salvador. O carnaval também não nos incluía. Então a gente fez o nosso espaço, positivamente e de modo pacífico.",
+        "Mas, sim… na época Antônio Vovô tinha muita influência das revoluções que estavam acontecendo nos EUA, dos Panteras Negras, do movimento Black Power, então ele queria botar o nome do bloco de Poder Negro. Mas Mãe Hilda aconselhou que aquele nome poderia dar problema com as autoridades da época.",
+        "Outra pessoa que repetiu o conselho foi Seu Arquimedes, que disse a Antônio Vovô a mesma história, que ele não colocasse aquele nome.", 
         "Foi. Então decidiu-se por uma votação. Na votação tinha uns quatro nomes. E Antônio Vovô não queria justamente esse nome de Ilê Ayiê, mas não teve jeito. Todo mundo gostou do nome Ilê Ayiê, porque era muito forte e muito significativo.",
         "Mas porque Ilê Aiyê, seu Vavá?",
-        "Ilê Aiyê, se for traduzir pro português quer dizer algumas coisas: Barro Preto, Mundo Negro, e outras traduções. O povo gostou muito e ficou esse nome mesmo. O Ilê, minha filha, é um presente que os orixás estavam guardando para a gente. E naquele carnaval de 75, Antônio Vovô, Apolônio e mais quase cem pessoas começaram a trazer esse presente para nós, que foi crescendo e tá aí até hoje, depois de 50 anos",
+        "Ilê Aiyê, se for traduzir pro português quer dizer algumas coisas: Barro Preto, Mundo Negro, e outras traduções. O povo gostou muito e ficou esse nome mesmo. O Ilê, minha filha, é um presente que os orixás estavam guardando para a gente.",
+        "E naquele carnaval de 75, Antônio Vovô, Apolônio e mais quase cem pessoas começaram a trazer esse presente para nós, que foi crescendo e tá aí até hoje, depois de 50 anos",
         "firme, forte e lindo. O mais belo dos belos.",
         "50 anos… Eita que você tá ficando velho, viu Vavá?!",
         "Velho eu já estou. E por falar em velho… Maria, sua vó já lhe contou a história de quando Obaluaiê foi a uma festa no Orun?",
@@ -66,42 +69,47 @@ public class ControleD3 : MonoBehaviour
     };
 
     private string[] nomes = {
-        "Vavá",
+        "Vava",
         "Lucinda",
-        "Vavá",
+        "Vava",
         "Lucinda",
-        "Vavá",
+        "Vava",
         "Lucinda",
-        "Vavá",
+        "Vava",
         "Maria",
-        "Vavá",
+        "Vava",
         "Lucinda",
-        "Vavá",
+        "Vava",
         "Lucinda",
-        "Vavá",
         "Lucinda",
-        "Vavá",
-        "Maria",
-        "Vavá",
+        "Vava",
+        "Vava",
         "Lucinda",
-        "Vavá",
+        "Vava",
         "Maria",
-        "Vavá",
+        "Vava",
+        "Vava",
+        "Lucinda",
+        "Lucinda",
+        "Vava",
         "Maria",
-        "Vavá",
+        "Vava",
         "Maria",
-        "Vavá",
+        "Vava",
         "Maria",
-        "Vavá",
+        "Vava",
+        "Maria",
+        "Vava",
+        "Maria",
+        "Vava",
+        "Maria",
+        "Vava",
         "Maria",
         "Lucinda",
-        "Maria",
+        "Vava",
         "Lucinda",
-        "Vavá",
-        "Lucinda",
-        "Vavá",
-        "Maria",
-        "Vavá"
+        "Vava",
+        "Maria"
     };
 
     void Start()
@@ -125,73 +133,56 @@ public class ControleD3 : MonoBehaviour
         }
     }
 
-    public void ShowFirstDialogue()
-    {
-        if (!firstDialogueCalled)
-        {
-            string currentNome = nomes[currentDialogueIndex];
-            if (currentNome == "Maria")
-            {
-                ShowMariaDialogue();
-            }
-            else if (currentNome == "Lucinda")
-            {
-                ShowLucindaDialogue();
-            }
-            else
-            {
-                ShowVavaDialogue();
-            }
-            firstDialogueCalled = true;
+    public void ShowFirstDialogue(){
+    if (!firstDialogueCalled){
+        string currentNome = nomes[currentDialogueIndex];
+        if (currentNome == "Lucinda"){
+            ShowLucindaDialogue();
+        } else if (currentNome == "Maria"){
+            ShowMariaDialogue();
+        } else if (currentNome == "Vava"){
+            ShowVavaDialogue();
+        }
+        firstDialogueCalled = true;
+    }
+}
+
+    public void ShowNextDialogue(){
+    if (firstDialogueCalled && currentDialogueIndex < falas.Length && !isTyping){
+        string currentNome = nomes[currentDialogueIndex];
+        if (currentNome == "Lucinda"){
+            ShowLucindaDialogue();
+        } else if (currentNome == "Maria"){
+            ShowMariaDialogue();
+        } else if (currentNome == "Vava"){
+            ShowVavaDialogue();
         }
     }
+}
 
-    public void ShowNextDialogue()
-    {
-        if (firstDialogueCalled && currentDialogueIndex < falas.Length && !isTyping)
-        {
-            string currentNome = nomes[currentDialogueIndex];
-            if (currentNome == "Maria")
-            {
-                ShowMariaDialogue();
-            }
-            else if (currentNome == "Lucinda")
-            {
-                ShowLucindaDialogue();
-            }
-            else
-            {
-                ShowVavaDialogue();
-            }
-        }
-    }
-
-    void ShowMariaDialogue()
-    {
-        ActivateDialogueBox(qmaria);
-        DeactivateDialogueBox(qlucinda);
-        DeactivateDialogueBox(qvava);
+    void ShowMariaDialogue(){
+        ActivateDialogueBox(qmaria); 
+        DeactivateDialogueBox(qlucinda); 
+        DeactivateDialogueBox(qvava); 
         StartCoroutine(DisplayText(falas[currentDialogueIndex], maria));
         currentDialogueIndex++;
     }
 
-    void ShowLucindaDialogue()
-    {
-        ActivateDialogueBox(qlucinda);
+    void ShowLucindaDialogue(){
+        ActivateDialogueBox(qlucinda); 
         DeactivateDialogueBox(qmaria);
-        DeactivateDialogueBox(qvava);
+        DeactivateDialogueBox(qvava); 
         StartCoroutine(DisplayText(falas[currentDialogueIndex], lucinda));
         currentDialogueIndex++;
     }
 
-    void ShowVavaDialogue()
-    {
-        ActivateDialogueBox(qvava);
-        DeactivateDialogueBox(qmaria);
-        DeactivateDialogueBox(qlucinda);
-        StartCoroutine(DisplayText(falas[currentDialogueIndex], vava));
-        currentDialogueIndex++;
-    }
+   void ShowVavaDialogue(){
+    ActivateDialogueBox(qvava); 
+    DeactivateDialogueBox(qmaria); 
+    DeactivateDialogueBox(qlucinda); 
+    StartCoroutine(DisplayText(falas[currentDialogueIndex], vava));
+    currentDialogueIndex++;
+}
 
     void ActivateDialogueBox(GameObject dialogueBox)
     {

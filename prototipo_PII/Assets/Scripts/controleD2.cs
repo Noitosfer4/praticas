@@ -12,6 +12,8 @@ public class ControleD2 : MonoBehaviour
     public GameObject qlucinda;
     public GameObject qvava; 
     public GameObject cap2; 
+    public GameObject mariaper; 
+    public GameObject lucindaper; 
     public float delayObjeto = 6f;
     private int currentDialogueIndex = 0; 
     private int currentCharIndex = 0; 
@@ -19,6 +21,8 @@ public class ControleD2 : MonoBehaviour
     private bool isTyping = false; 
     public bool skip = false;
     bool panelActive;
+    public GameObject vavaper;
+
     private string[] falas = {
         "Ô Vavá, tá aí, Vavá?",
         "Opa, rapaz, olha quem apareceu. Chegue pra cá. Como é que está, Maria?",
@@ -36,6 +40,10 @@ public class ControleD2 : MonoBehaviour
         qlucinda.SetActive(false);
         qmaria.SetActive(false);
         qvava.SetActive(false);
+        mariaper.SetActive(false); 
+        lucindaper.SetActive(false); 
+        vavaper.SetActive(false); 
+        
     }
 
    void Update(){
@@ -46,52 +54,66 @@ public class ControleD2 : MonoBehaviour
                 ShowNextDialogue();
             }
         }
+
+        if(cap2.active == false){
+            mariaper.SetActive(true); 
+            lucindaper.SetActive(true); 
+        }
     }
 
   public void ShowFirstDialogue(){
     if (!firstDialogueCalled){
         string currentNome = nomes[currentDialogueIndex];
         if (currentNome == "Lucinda"){
-            ShowMariaDialogue();
-        } else {
             ShowLucindaDialogue();
+        } else if (currentNome == "Maria"){
+            ShowMariaDialogue();
+        } else if (currentNome == "Vava"){
+            ShowVavaDialogue();
         }
         firstDialogueCalled = true;
-        
     }
 }
 
 public void ShowNextDialogue(){
     if (firstDialogueCalled && currentDialogueIndex < falas.Length && !isTyping){
         string currentNome = nomes[currentDialogueIndex];
-        if (currentNome == "Vava"){
-            ShowMariaDialogue();
-        } else {
+        if (currentNome == "Lucinda"){
             ShowLucindaDialogue();
+        } else if (currentNome == "Maria"){
+            ShowMariaDialogue();
+        } else if (currentNome == "Vava"){
+            ShowVavaDialogue();
         }
     }
 }
 
+
     void ShowMariaDialogue(){
         ActivateDialogueBox(qmaria); 
         DeactivateDialogueBox(qlucinda); 
+        DeactivateDialogueBox(qvava); 
         StartCoroutine(DisplayText(falas[currentDialogueIndex], maria));
         currentDialogueIndex++;
     }
 
     void ShowLucindaDialogue(){
         ActivateDialogueBox(qlucinda); 
-        DeactivateDialogueBox(qmaria); 
+        DeactivateDialogueBox(qmaria);
+        DeactivateDialogueBox(qvava); 
         StartCoroutine(DisplayText(falas[currentDialogueIndex], lucinda));
         currentDialogueIndex++;
     }
 
-    void ShowVavaDialogue(){
-        ActivateDialogueBox(qvava); 
-        DeactivateDialogueBox(qvava); 
-        StartCoroutine(DisplayText(falas[currentDialogueIndex], vava));
-        currentDialogueIndex++;
-    }
+   void ShowVavaDialogue(){
+    vavaper.SetActive(true);
+    ActivateDialogueBox(qvava); 
+    DeactivateDialogueBox(qmaria); 
+    DeactivateDialogueBox(qlucinda); 
+    StartCoroutine(DisplayText(falas[currentDialogueIndex], vava));
+    currentDialogueIndex++;
+}
+
 
     
     void ActivateDialogueBox(GameObject dialogueBox){
@@ -125,13 +147,20 @@ public void ShowNextDialogue(){
         skip = false; 
 
         
-        if (text == "Tô bem, seu Vavá. E o senhor?") {
-            SceneManager.LoadScene("cap2c");
+        if (text == "Tô bem, seu Vavá. E o senhor?" && !isTyping && qmaria.active == true)
+        {
+            StartCoroutine(LoadSceneAfterDelay("cap2c", 2f));
         }
     }
 
     public void SkipDialogue(){
         skip = true; 
+    }
+
+    IEnumerator LoadSceneAfterDelay(string sceneName, float delay)
+    {
+    yield return new WaitForSeconds(delay);
+    SceneManager.LoadScene(sceneName);
     }
 }
 

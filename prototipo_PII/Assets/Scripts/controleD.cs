@@ -87,7 +87,7 @@ public class ControleD : MonoBehaviour
                 ShowNextDialogue();
             }
         }
-        if (hidesomething.active == false) { ShowFirstDialogue(); }
+        if (hidesomething.active == false && pan.active == false) { ShowFirstDialogue(); }
 
     }
 
@@ -99,34 +99,31 @@ public class ControleD : MonoBehaviour
         } else {
             ShowLucindaDialogue();
         }
-        firstDialogueCalled = true;
-        
+        firstDialogueCalled = true; // Atualiza o valor de firstDialogueCalled para true
     }
 }
-    public GameObject qMaria;
+
 public void ShowNextDialogue(){
     if (firstDialogueCalled && currentDialogueIndex < falas.Length && !isTyping){
-        string currentNome = nomes[currentDialogueIndex];
+        string currentNome = nomes[currentDialogueIndex]; // Atualiza o valor de currentNome
         if (currentNome == "Maria"){
             ShowMariaDialogue();
         } else {
             ShowLucindaDialogue();
         }
-            if (currentDialogueIndex == 3)
-            {
-                cantDialogue = true;
-                
-            }
-            if(cantDialogue == true)
-            {
-                qmaria.SetActive(false);
-            }
-            else
-            {
-                qmaria.SetActive(true);
-                
-            }
+        if (currentDialogueIndex == 3)
+        {
+            cantDialogue = true;
         }
+        if(cantDialogue == true)
+        {
+            qmaria.SetActive(false);
+        }
+        else
+        {
+            qmaria.SetActive(true);
+        }
+    }
 }
 
     void ShowMariaDialogue(){

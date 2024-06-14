@@ -33,7 +33,7 @@ public class maqE : MonoBehaviour
     }
 
     public void UpdateDelay(){
-        delay = -1f;
+        delay = -1.6f;
         StartCoroutine(DeactivateObjectAfterDelay());
     }
 

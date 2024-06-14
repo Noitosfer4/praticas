@@ -281,7 +281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &220375809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &358817866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1124,6 +1124,7 @@ GameObject:
   - component: {fileID: 876006154}
   - component: {fileID: 876006156}
   - component: {fileID: 876006157}
+  - component: {fileID: 876006158}
   m_Layer: 0
   m_Name: mariaper
   m_TagString: Untagged
@@ -1270,6 +1271,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.963861, y: 0.4358716}
   m_EdgeRadius: 0
+--- !u!114 &876006158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876006152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa737e5c1e09a44c8e1f453b7fb2260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 876006156}
+  spriteRenderer: {fileID: 876006154}
+  controleD: {fileID: 1507068895}
+  runSpeed: 5
 --- !u!1 &887547388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1640,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345913673}
-  - component: {fileID: 1345913674}
   m_Layer: 0
   m_Name: Guria
   m_TagString: Untagged
@@ -1648,21 +1664,6 @@ Transform:
   - {fileID: 876006155}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1345913674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345913672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa737e5c1e09a44c8e1f453b7fb2260, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 876006156}
-  spriteRenderer: {fileID: 876006154}
-  runSpeed: 5
 --- !u!1 &1374877727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,6 +2083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4592bfde03844fe41bfc48f4267de45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantDialogue: 0
+  hidesomething: {fileID: 220375808}
   maria: {fileID: 585518506}
   lucinda: {fileID: 1144435941}
   qmaria: {fileID: 520713536}
@@ -2089,8 +2092,10 @@ MonoBehaviour:
   pan: {fileID: 358817865}
   cap1: {fileID: 220375808}
   delayObjeto: 6
+  currentDialogueIndex: 0
   firstDialogueCalled: 0
   skip: 0
+  qMaria: {fileID: 520713536}
 --- !u!1 &1572419705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2909,7 +2914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357900ca704431a4ebecb3f7674f0e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
+  delay: 0.06
   pane: {fileID: 358817865}
   cap1: {fileID: 220375808}
 --- !u!1 &2069325676
@@ -2962,7 +2967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df290fccf6c24704c88b134aa5c84026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
+  delay: 0.06
   image: {fileID: 220375808}
 --- !u!114 &2069325679
 MonoBehaviour:
@@ -3264,7 +3269,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0

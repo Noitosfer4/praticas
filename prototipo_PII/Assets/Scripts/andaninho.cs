@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class moverobj2 : MonoBehaviour
+public class andaninho : MonoBehaviour
 {
 
     public Rigidbody2D body;
-    public SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer, sprite2;
     float horizontal;
     float vertical;
-    public ControleD controleD;
+    public ControleD2 controleD2;
 
     public float runSpeed = 20.0f;
 
@@ -37,8 +37,7 @@ public class moverobj2 : MonoBehaviour
        if (col.gameObject.CompareTag("Dialogo"))
        {
 
-        controleD.cantDialogue = false;
-        controleD.qmaria.SetActive(true);
+        controleD2.ShowFirstDialogue();
         runSpeed = 0;
 
        }

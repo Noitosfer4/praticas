@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ControleD : MonoBehaviour
 {
+    public bool cantDialogue;
+    public GameObject hidesomething;
+
     public TextMeshProUGUI maria;
     public TextMeshProUGUI lucinda; 
     public GameObject qmaria; 
@@ -13,7 +16,7 @@ public class ControleD : MonoBehaviour
     private bool panelActive; 
     public GameObject cap1; 
     public float delayObjeto = 6f;
-    private int currentDialogueIndex = 0; 
+    public int currentDialogueIndex = 0; 
     private int currentCharIndex = 0; 
     public bool firstDialogueCalled = false; 
     private bool isTyping = false; 
@@ -21,6 +24,7 @@ public class ControleD : MonoBehaviour
     private string[] falas = {
         "Oi pessoal, como vocês estão? Tudo bem? Eu sou a Maria. hoje é o dia do meu primeiro desfile pelo Ilê Aiyê! Ele está fazendo 50 anos. Eu tô tão feliz!!! Tem muito tempo que eu espero por isso. Eu tô muito ansiosa também.",
         "Ahh! Pra quem não sabe, o Ilê Aiyê é o primeiro bloco afro do Brasil. Nasceu aqui na Liberdade, na ladeira do Curuzu. É aqui que eu moro com minha Vó Lucinda. Eu e ela também somos filhas da liberdade, que nem o Ilê Aiyê.",
+        "Benção Vó",
         "Benção Vó, cheguei",
         "Como foi a aula, minha filha?",
         "Foi boa, vó.",
@@ -43,6 +47,7 @@ public class ControleD : MonoBehaviour
     };
 
     private string[] nomes = {
+        "Maria",
         "Maria",
         "Maria",
         "Maria",
@@ -70,7 +75,8 @@ public class ControleD : MonoBehaviour
     void Start(){
         qlucinda.SetActive(false);
         qmaria.SetActive(false);
-        panelActive = false; 
+        panelActive = false;
+        
     }
 
    void Update(){
@@ -81,6 +87,8 @@ public class ControleD : MonoBehaviour
                 ShowNextDialogue();
             }
         }
+        if (hidesomething.active == false) { ShowFirstDialogue(); }
+
     }
 
   public void ShowFirstDialogue(){
@@ -95,7 +103,7 @@ public class ControleD : MonoBehaviour
         
     }
 }
-
+    public GameObject qMaria;
 public void ShowNextDialogue(){
     if (firstDialogueCalled && currentDialogueIndex < falas.Length && !isTyping){
         string currentNome = nomes[currentDialogueIndex];
@@ -104,7 +112,21 @@ public void ShowNextDialogue(){
         } else {
             ShowLucindaDialogue();
         }
-    }
+            if (currentDialogueIndex == 3)
+            {
+                cantDialogue = true;
+                
+            }
+            if(cantDialogue == true)
+            {
+                qmaria.SetActive(false);
+            }
+            else
+            {
+                qmaria.SetActive(true);
+                
+            }
+        }
 }
 
     void ShowMariaDialogue(){

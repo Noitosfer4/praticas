@@ -2,18 +2,45 @@ using UnityEngine;
 
 public class moverobj2 : MonoBehaviour
 {
-    public float pontoInicialX;
-    public float pontoFinalX;
-    public float velocidade = 1.0f;
 
-    void Start()
-    {
-        transform.position = new Vector3(pontoInicialX, transform.position.y, transform.position.z);
-    }
+    public Rigidbody2D body;
+    public SpriteRenderer spriteRenderer;
+    float horizontal;
+    float vertical;
+
+    public float runSpeed = 20.0f;
 
     void Update()
     {
-        float novaPosicaoX = Mathf.MoveTowards(transform.position.x, pontoFinalX, velocidade * Time.deltaTime);
-        transform.position = new Vector3(novaPosicaoX, transform.position.y, transform.position.z);
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+
+        {
+            if (horizontal > 0 || horizontal == 0 && spriteRenderer.flipX == false)
+            {
+
+                spriteRenderer.flipX = false;
+            }
+
+            else if(horizontal < 0 || horizontal == 0 && spriteRenderer.flipX == true)
+            {
+                spriteRenderer.flipX = true;
+            }
+            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        }
+
     }
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+    
+       if (col.gameObject.CompareTag("Dialogo"))
+       {
+
+          Debug.Log("awake");
+
+       }
+
+    }
+
+
 }

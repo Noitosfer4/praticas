@@ -223,7 +223,7 @@ public class controleD5 : MonoBehaviour
 
         if (text == "Tchau, Até mais tarde.")
         {
-            SceneManager.LoadScene("cap4");
+            SceneManager.LoadScene("minigamerouoas");
         }
     }
 

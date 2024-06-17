@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Minigamescript : MonoBehaviour
@@ -10,17 +11,15 @@ public class Minigamescript : MonoBehaviour
     public List<Sprite> AllSprites;
     private static string[] DialogueWrong = { "Seila, acho que esta faltando algo...", "Nao combina!", "Deve ter uma melhor...", "Essa roupa nao combina com um desfile do Ile!",
     "Tem uma escolha melhor.", "Nao esta certo.", "Nao parece bom", "Tem roupas melhores nao acha Maria?", "Nao!", "Escolha melhor minha filha..."};
-
-    private static string[] DialogueRight = { "Perfeito!!", "Este esta perfeito", "Amei! Perfeito para o desfile", "Este te serviu muito bem!", "Voce está linda com esse" };
-
+    private static string[] DialogueRight = { "Perfeito!!", "Este esta perfeito", "Amei! Perfeito para o desfile", "Este te serviu muito bem!", "Voce esta linda com esse", "Combinou direitinho! Nao acha?" };
     public TMP_Text text;
     public bool correto;
+
     private void Start()
     {
         correto = false; 
         continuebutton.interactable = false;
         sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0f);
-
     }
     private void Update()
     {
@@ -93,6 +92,6 @@ public class Minigamescript : MonoBehaviour
 
     public void Conitunar()
     {
-        Debug.Log("faz algo aq, mudar de cena talvez");
+        SceneManager.LoadScene("cap4");
     }
 }

@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/avisop.unity
     guid: 2ac81dbad2acb4b4492944c89b591842
+  - enabled: 1
+    path: Assets/Scenes/minigamerouoas.unity
+    guid: d6dc52268bdb59f4fa21fa1c33719134
   - enabled: 0
     path: Assets/Scenes/PAUSE.unity
     guid: 1d690af484554f7409fe75f55b9ac46a

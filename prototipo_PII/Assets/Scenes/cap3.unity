@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5803922, g: 0.43529415, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -757,7 +757,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 2071257223}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1046,9 +1046,9 @@ GameObject:
   m_Component:
   - component: {fileID: 789656882}
   - component: {fileID: 789656886}
-  - component: {fileID: 789656885}
   - component: {fileID: 789656884}
   - component: {fileID: 789656883}
+  - component: {fileID: 789656887}
   m_Layer: 0
   m_Name: andar
   m_TagString: Untagged
@@ -1117,19 +1117,6 @@ MonoBehaviour:
   sprite2: {fileID: 271109913}
   controleD2: {fileID: 0}
   runSpeed: 5
---- !u!114 &789656885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789656881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e4eaf2cf4869c4d90660b67df7dd58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controleD2: {fileID: 0}
 --- !u!61 &789656886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1175,6 +1162,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.561928, y: 3.6139996}
   m_EdgeRadius: 0
+--- !u!114 &789656887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789656881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0114298c0039d784792ea1086acc836a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controleD4: {fileID: 629351519}
 --- !u!1 &801984494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,8 +2685,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ControleD2, Assembly-CSharp
+      - m_Target: {fileID: 629351519}
+        m_TargetAssemblyTypeName: ControleD4, Assembly-CSharp
         m_MethodName: SkipDialogue
         m_Mode: 1
         m_Arguments:
@@ -3073,6 +3073,7 @@ GameObject:
   - component: {fileID: 2071257224}
   - component: {fileID: 2071257223}
   - component: {fileID: 2071257222}
+  - component: {fileID: 2071257225}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3154,6 +3155,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2071257225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071257221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddda80020a34070478cbb9ca79d84668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FollowSpeed: 2
+  yOffset: 1.55
+  target: {fileID: 354640022}
 --- !u!1 &2130947864
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,15 +24,22 @@ public class ControleD4 : MonoBehaviour
     public GameObject deteper;
 
     private string[] falas = {
-        "Ô Vavá, tá aí, Vavá?",
-        "Opa, rapaz, olha quem apareceu. Chegue pra cá. Como é que está, Maria?",
-        "Tô bem, seu Vavá. E o senhor?"
+        "A gente vai na casa de Dona Elisabete pegar o seu turbante. Tá pronta?",
+        "Tô pronta. ",
+        "Ô de casa! Ô Elisabete!",
+        "Oi! É tú Lucinda?",
+        "É ela mesma. ",
+        "Chegue pra cá. Entre."
+        
     };
 
     private string[] nomes = {
         "Lucinda",
-        "Vava",
-        "Maria"
+        "Maria",
+        "Lucinda",
+        "Elisabete",
+        "Lucinda",
+        "Elisabete"
     };
 
     
@@ -68,7 +75,7 @@ public class ControleD4 : MonoBehaviour
             ShowLucindaDialogue();
         } else if (currentNome == "Maria"){
             ShowMariaDialogue();
-        } else if (currentNome == "Vava"){
+        } else if (currentNome == "Elisabete"){
             ShowVavaDialogue();
         }
         firstDialogueCalled = true;
@@ -82,7 +89,7 @@ public void ShowNextDialogue(){
             ShowLucindaDialogue();
         } else if (currentNome == "Maria"){
             ShowMariaDialogue();
-        } else if (currentNome == "Vava"){
+        } else if (currentNome == "Elisabete"){
             ShowVavaDialogue();
         }
     }
@@ -147,9 +154,9 @@ public void ShowNextDialogue(){
         skip = false; 
 
         
-        if (text == "Tô bem, seu Vavá. E o senhor?" && !isTyping && qmaria.active == true)
+        if (text == "Chegue pra cá. Entre." && !isTyping && qdete.active == true)
         {
-            StartCoroutine(LoadSceneAfterDelay("cap2c", 2f));
+            StartCoroutine(LoadSceneAfterDelay("cap3c", 2f));
         }
     }
 

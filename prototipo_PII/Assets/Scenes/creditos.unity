@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 541571723}
   - component: {fileID: 541571722}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: abf3db2f60386bf48a59394f355baeef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 686cdddacf7da28498d30b88bdd50494, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 621896038}
   - component: {fileID: 621896037}
   m_Layer: 5
-  m_Name: voltar
+  m_Name: Button - Return/Voltar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,8 +351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0025635, y: -336}
-  m_SizeDelta: {x: 323.63, y: 90.33}
+  m_AnchoredPosition: {x: 10.51, y: -364.85}
+  m_SizeDelta: {x: 231.49, y: 61.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621896037
 MonoBehaviour:
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 2145078498}
   - component: {fileID: 2145078497}
   m_Layer: 0
-  m_Name: click
+  m_Name: Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

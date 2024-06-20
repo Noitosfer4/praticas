@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 393297989}
   - component: {fileID: 393297988}
   m_Layer: 5
-  m_Name: opcoes
+  m_Name: "Button - Options/Op\xE7\xF5es"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.000001, y: -140}
-  m_SizeDelta: {x: 323.63, y: 90.33}
+  m_AnchoredPosition: {x: 5.55, y: -130.88}
+  m_SizeDelta: {x: 241.93, y: 87.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393297988
 MonoBehaviour:
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 693561171}
   - component: {fileID: 693561170}
   m_Layer: 5
-  m_Name: sair
+  m_Name: Button - Exit/Sair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5000057, y: -351.35}
-  m_SizeDelta: {x: 320.63, y: 105.7}
+  m_AnchoredPosition: {x: -3.28, y: -343.26}
+  m_SizeDelta: {x: 145.67, y: 89.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693561170
 MonoBehaviour:
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 772175238}
   - component: {fileID: 772175237}
   m_Layer: 5
-  m_Name: jogar
+  m_Name: Button - Play/Jogar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,8 +422,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -36}
-  m_SizeDelta: {x: 323.63, y: 90.33}
+  m_AnchoredPosition: {x: 5.24, y: -32.545}
+  m_SizeDelta: {x: 201.07, y: 65.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772175237
 MonoBehaviour:
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 786729751}
   - component: {fileID: 786729750}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c9b5d19b0278edd46acc66a2f1ad8245, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e2ad4baf3cab0e49b52eaa02d856d72, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 1056292212}
   - component: {fileID: 1056292214}
   m_Layer: 0
-  m_Name: Musica
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +937,7 @@ GameObject:
   - component: {fileID: 1476481215}
   - component: {fileID: 1476481214}
   m_Layer: 5
-  m_Name: creditos
+  m_Name: "Button - Credits/Cr\xE9ditos"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -959,8 +959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.000001, y: -245}
-  m_SizeDelta: {x: 323.63, y: 90.33}
+  m_AnchoredPosition: {x: 4.77, y: -245}
+  m_SizeDelta: {x: 302.05, y: 90.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476481214
 MonoBehaviour:
@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 1700061632}
   - component: {fileID: 1700061634}
   m_Layer: 0
-  m_Name: click
+  m_Name: Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

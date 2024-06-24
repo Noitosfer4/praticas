@@ -16,7 +16,7 @@ public class moverobj2 : MonoBehaviour
         if (controleD.currentDialogueIndex > 2)
         {
             horizontal = Input.GetAxisRaw("Horizontal");
-            vertical = Input.GetAxisRaw("Vertical");
+            //vertical = Input.GetAxisRaw("Vertical");
 
             if (horizontal > 0 || horizontal == 0 && spriteRenderer.flipX == false)
             {

@@ -158,11 +158,11 @@ RectTransform:
   - {fileID: 1433043949}
   - {fileID: 431347673}
   - {fileID: 389708111}
-  - {fileID: 1416322381}
   - {fileID: 1067278082}
   - {fileID: 1592889766}
   - {fileID: 1175123220}
   - {fileID: 1913399005}
+  - {fileID: 1416322381}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1044,7 +1044,7 @@ GameObject:
   - component: {fileID: 784229243}
   - component: {fileID: 784229242}
   m_Layer: 5
-  m_Name: voltar
+  m_Name: Button - Return/Voltar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 1175123222}
   - component: {fileID: 1175123221}
   m_Layer: 5
-  m_Name: pausemenu
+  m_Name: Pause Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1779,8 +1779,8 @@ RectTransform:
   m_LocalScale: {x: 1.0000799, y: 1.0000799, z: 1.0000799}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1436746686}
   - {fileID: 1785222557}
+  - {fileID: 1436746686}
   - {fileID: 1178454493}
   m_Father: {fileID: 50385395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9653e147c88e332408706e034faa28e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d006c4b41a953f24f9e0f6b24afa6d1d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1840,7 +1840,7 @@ GameObject:
   - component: {fileID: 1178454495}
   - component: {fileID: 1178454494}
   m_Layer: 5
-  m_Name: sair
+  m_Name: Button - Exit/Sair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2007,7 +2007,7 @@ GameObject:
   - component: {fileID: 1362963239}
   - component: {fileID: 1362963238}
   m_Layer: 5
-  m_Name: Volume Musica
+  m_Name: Music Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2124,7 +2124,7 @@ GameObject:
   - component: {fileID: 1416322383}
   - component: {fileID: 1416322382}
   m_Layer: 5
-  m_Name: skip
+  m_Name: Button - Skip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2331,7 +2331,7 @@ GameObject:
   - component: {fileID: 1436746688}
   - component: {fileID: 1436746687}
   m_Layer: 5
-  m_Name: opcoes
+  m_Name: "Button - Options/Op\xE7\xF5es"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2462,7 +2462,7 @@ GameObject:
   - component: {fileID: 1592889768}
   - component: {fileID: 1592889767}
   m_Layer: 5
-  m_Name: opcoes
+  m_Name: Options Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2509,7 +2509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4f560d3a10207e4ba90e3d62f669fa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56928343ea6a3e84d9db49708d41dcd4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2824,7 +2824,7 @@ GameObject:
   - component: {fileID: 1785222559}
   - component: {fileID: 1785222558}
   m_Layer: 5
-  m_Name: voltar
+  m_Name: Button - Return/Voltar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3031,7 +3031,7 @@ GameObject:
   - component: {fileID: 1913399007}
   - component: {fileID: 1913399006}
   m_Layer: 5
-  m_Name: PAUSEbotao
+  m_Name: Button - Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

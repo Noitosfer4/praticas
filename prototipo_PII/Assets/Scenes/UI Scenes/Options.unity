@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 164429590}
   - component: {fileID: 164429589}
   - component: {fileID: 164429588}
-  - component: {fileID: 164429587}
+  - component: {fileID: 164429592}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -179,20 +179,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &164429587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164429586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 354d4ba68938e264487770cfdf332705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pause: {fileID: 0}
-  opcoes: {fileID: 0}
 --- !u!114 &164429588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +264,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &164429592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164429586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adbe9de4a289cd24894c4b1b84598967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &774495118
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.5471698, b: 0.10505238, a: 1}
+  m_Color: {r: 1, g: 0.8509804, b: 0.38039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -531,7 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5764706, g: 0.4392157, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -722,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.16862746, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -760,7 +758,7 @@ GameObject:
   - component: {fileID: 1685464035}
   - component: {fileID: 1685464034}
   m_Layer: 5
-  m_Name: voltar
+  m_Name: Button - Return/Voltar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,8 +780,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0025635, y: -376}
-  m_SizeDelta: {x: 323.63, y: 90.33}
+  m_AnchoredPosition: {x: 0.67, y: -384.25}
+  m_SizeDelta: {x: 225.93, y: 56.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685464034
 MonoBehaviour:
@@ -829,10 +827,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 164429587}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: LoadScenes
-        m_Mode: 5
+      - m_Target: {fileID: 164429592}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: MenuButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -935,7 +933,7 @@ GameObject:
   - component: {fileID: 1733417183}
   - component: {fileID: 1733417182}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Backgound image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -980,7 +978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4f560d3a10207e4ba90e3d62f669fa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56928343ea6a3e84d9db49708d41dcd4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

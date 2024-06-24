@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class clique : MonoBehaviour
+public class ClickSoundEffect : MonoBehaviour
 {
     private AudioSource audioSource;
 
